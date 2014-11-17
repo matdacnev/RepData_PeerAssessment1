@@ -81,7 +81,7 @@ getMean.fct = function(interval) { # interval should be a string
 }
 ```
 
-Count the number of missing values and create a new data frame with no missing values.
+Count the number of missing values and create a new data frame with no missing values. The strategy for the imputation is to replace NAs by the average number of steps (accross all days) caclulated for the corresponding interval.
 
 
 ```r

@@ -269,7 +269,7 @@ qplot(UniqInterval, MeanStepPerInterval, geom=&quot;line&quot;) + xlab(&quot;Int
 }
 </code></pre>
 
-<p>Count the number of missing values and create a new data frame with no missing values.</p>
+<p>Count the number of missing values and create a new data frame with no missing values. The strategy for the imputation is to replace NAs by the average number of steps (accross all days) caclulated for the corresponding interval.</p>
 
 <pre><code class="r">IdxMissing = which(is.na(Data$steps))
 nbrMissing = length(IdxMissing)
